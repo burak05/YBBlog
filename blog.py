@@ -5,8 +5,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    sayi = 10
-    return render_template("index.html",number=sayi)
+    article = dict()
+    article["Title"] = "Title"
+    article["Body"] = "Body"
+    article["Author"] = "Author"
+    return render_template("index.html",article = article)
 
 if __name__ == "__main__" :
     app.run(debug=True)
